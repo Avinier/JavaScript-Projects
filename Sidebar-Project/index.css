@@ -1,0 +1,135 @@
+:root {
+  --color-primary: hsl(210, 22%, 49%);
+  --color-close: hsl(355, 92%, 62%);
+  --color-bg: hsl(205, 100%, 82%);
+  --color-btn: hsl(205, 100%, 70%);
+  --color-grey: hsl(210, 79%, 95%);
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+  background: var(--color-grey);
+  position: relative;
+}
+
+/* Sidebar Toggle */
+.sidebar__toggle {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  width: fit-content;
+  border: none;
+  background: none;
+  animation: bounce 2s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.sidebar__toggle ion-icon {
+  width: 4rem;
+  height: 4rem;
+  color: var(--color-btn);
+  transition: 0.3s ease;
+}
+
+.sidebar__toggle ion-icon:hover {
+  color: var(--color-bg);
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.sidebar {
+  width: 25%;
+  height: 100vh;
+  padding-top: 1rem;
+  background: white;
+  transition: 0.3s ease;
+  transform: translate(-100%);
+}
+
+.show_sidebar {
+  transform: translate(0);
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+/* Sidebar Header */
+.sidebar__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+  padding-left: 2rem;
+}
+
+.btn--close {
+  width: fit-content;
+  height: fit-content;
+  outline: none;
+  border: none;
+  background: transparent;
+  display: grid;
+  place-items: center;
+}
+
+.icon--close {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-close);
+  transition: transform 0.3s ease;
+}
+
+.icon--close:hover {
+  transform: rotate(90deg);
+}
+
+/* Sidebar Options */
+.links {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.links li {
+  width: 100%;
+  height: 6rem;
+  padding-left: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.links li:hover {
+  background: var(--color-bg);
+  padding-left: 3.15rem;
+}
