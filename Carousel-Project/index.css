@@ -1,0 +1,168 @@
+:root {
+  --color-title: rgb(3, 24, 82);
+  --color-primary: rgb(26, 169, 252);
+  --color-primary-dark: rgb(1, 144, 226);
+  --color-accent: rgb(44, 202, 241);
+  --color-accent-2: rgb(78, 214, 248);
+  --color-bg-1: hsl(205, 100%, 96%);
+  --color-bg-2: hsl(210, 36%, 96%);
+  --color-grey: rgb(124, 124, 124);
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+}
+
+/* Container */
+.container {
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  background: var(--color-bg-2);
+}
+
+/* Title and Fonts */
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 4rem;
+  color: var(--color-title);
+  letter-spacing: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.75rem;
+}
+
+.title {
+  margin-bottom: 8rem;
+}
+
+.underline {
+  width: 10rem;
+  height: 0.5rem;
+  background: var(--color-primary);
+  margin: 0 auto;
+}
+
+/* Card */
+.card {
+  width: 40%;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile Image */
+.image {
+  width: 18rem;
+  height: 18rem;
+  object-fit: cover;
+  clip-path: circle(50% at 50% 50%);
+}
+
+.container__image {
+  height: fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  position: relative;
+}
+
+.container__image::after {
+  display: grid;
+  place-items: center;
+  content: url(/star.svg);
+  width: 5rem;
+  height: 5rem;
+  background: var(--color-primary);
+  position: absolute;
+  top: 0.8rem;
+  left: 0.2rem;
+  border-radius: 50%;
+}
+
+.container__image::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--color-primary);
+  position: absolute;
+  top: -0.4rem;
+  right: -0.8rem;
+  border-radius: 50%;
+}
+
+/* Content */
+.card__heading {
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 0.15rem;
+}
+
+.card__subheading {
+  color: var(--color-accent);
+  font-size: 1.5rem;
+  margin: 0.8rem 0;
+}
+
+.card__content {
+  color: var(--color-grey);
+}
+
+/* Chevrons and Buttons */
+.btn {
+  width: fit-content;
+  height: fit-content;
+  background: transparent;
+  outline: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+ion-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--color-primary);
+}
+
+ion-icon:hover {
+  color: var(--color-primary-dark);
+}
+
+.card__btn {
+  background: var(--color-bg-1);
+  color: var(--color-accent-2);
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--color-accent);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.card__btn:hover {
+  background: var(--color-accent-2);
+  color: var(--color-title);
+}
