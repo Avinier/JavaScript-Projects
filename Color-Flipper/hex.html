@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/index.css" />
+    <style>
+      .hex::after {
+        position: absolute;
+        left: -3px;
+        top: 23px;
+        content: "";
+        background: #222;
+        width: 110%;
+        height: 7.5px;
+      }
+    </style>
+    <title>JS Practice | Color Flipper</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="title">
+        <p>Color Flipper</p>
+      </div>
+      <div class="color-modes">
+        <a class="simple" href="index.html">Simple</a>
+        <a class="hex" href="hex.html">Hex</a>
+      </div>
+    </nav>
+    <main class="container__main">
+      <div class="container__display">
+        <h1>Background Color&nbsp;:&nbsp; <span class="color">#222</span></h1>
+      </div>
+      <button class="btn" id="btn-el">Click Me</button>
+    </main>
+    <script src="hex.js"></script>
+  </body>
+</html>
